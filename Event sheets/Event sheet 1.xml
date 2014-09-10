@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="TVOn" sid="8797328585920017" static="0" type="number">0</variable>
+        <variable constant="0" name="PercentDecrease" sid="245430250606129" static="0" type="number">0.01</variable>
+        <variable constant="0" name="BarWidth" sid="9242312160523289" static="0" type="number">0</variable>
+        <event-block sid="2829176464530621">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1841064285211016" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="2333644234565661" type="Money">
+                    <param id="0" name="Width">Money.Width-((BarWidth*PercentDecrease)*dt)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1406533708278915">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="9273881570420754" type="System">
+                    <param id="0" name="First value">Money.Width</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="3927489070819272" type="Money">
+                    <param id="0" name="Width">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="835316184958081">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7624202517086358" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3860369496132833" type="System">
+                    <param id="0" name="Variable">BarWidth</param>
+                    <param id="1" name="Value">Money.Width</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="134494645659126">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1309381612139353" type="Touch">
+                    <param id="0" name="Object">TV</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6419129916595266">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="952548841937281" type="System">
+                            <param id="0" name="Variable">TVOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3659059549578285" type="System">
+                            <param id="0" name="Variable">TVOn</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="1966429773127062" type="System">
+                            <param id="0" name="Variable">PercentDecrease</param>
+                            <param id="1" name="Value">0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3422384782980207">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8273188377225191" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="94391231556567" type="System">
+                            <param id="0" name="Variable">TVOn</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="7456466785434046" type="System">
+                            <param id="0" name="Variable">PercentDecrease</param>
+                            <param id="1" name="Value">0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
