@@ -11,6 +11,7 @@
     <saved-with-version>17300</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors />
@@ -23,6 +24,7 @@
         <height>480</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
+    <first-layout>StartMenu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -66,13 +68,43 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Text_Start" sid="8956039703873163">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text_Options" sid="2914519565988694">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text_Instructions" sid="4331626930500513">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text_Reset" sid="6330977593352441">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Instructions" sid="7505878961237098">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="BackButton" sid="5158582482810189">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite" sid="5611513308160327">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6449607773992122" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
-        <layout>Layout 1.xml</layout>
+        <layout>MainGame.xml</layout>
+        <layout>StartMenu.xml</layout>
+        <layout>Instructions.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>MainGameEvents.xml</event-sheet>
+        <event-sheet>StartMenuEvents.xml</event-sheet>
+        <event-sheet>InstructionsEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="0">
