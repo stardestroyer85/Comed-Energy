@@ -3,6 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MainGameEvents</name>
     <events>
+        <variable constant="0" name="MoneyLeft" sid="2416233183658429" static="0" type="number">0</variable>
+        <variable constant="0" name="StartMoney" sid="4017053218479099" static="0" type="number">2000</variable>
+        <variable constant="0" name="LampOn" sid="2071632807708178" static="0" type="number">0</variable>
+        <variable constant="0" name="CompOn" sid="9045733556871587" static="0" type="number">0</variable>
         <variable constant="0" name="TVOn" sid="8797328585920017" static="0" type="number">0</variable>
         <variable constant="0" name="PercentDecrease" sid="245430250606129" static="0" type="number">0.01</variable>
         <variable constant="0" name="BarWidth" sid="9242312160523289" static="0" type="number">0</variable>
@@ -13,6 +17,27 @@
             <actions>
                 <action id="-5" name="Set width" sid="2333644234565661" type="Money">
                     <param id="0" name="Width">Money.Width-((BarWidth*PercentDecrease)*dt)</param>
+                </action>
+                <action id="-9" name="Set value" sid="3797637371831704" type="System">
+                    <param id="0" name="Variable">MoneyLeft</param>
+                    <param id="1" name="Value">floor((Money.Width/BarWidth)*StartMoney)</param>
+                </action>
+                <action id="0" name="Set text" sid="30569994674604" type="MoneyTxt">
+                    <param id="0" name="Text">MoneyLeft</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5744671866849269">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="9843540924829017" type="System">
+                    <param id="0" name="Variable">MoneyLeft</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1305025057106539" type="MoneyTxt">
+                    <param id="0" name="Text">0</param>
                 </action>
             </actions>
         </event-block>
@@ -44,7 +69,7 @@
         <event-block sid="134494645659126">
             <conditions>
                 <condition id="3" name="On touched object" sid="1309381612139353" type="Touch">
-                    <param id="0" name="Object">TV</param>
+                    <param id="0" name="Object">TVHitbox</param>
                 </condition>
             </conditions>
             <actions />
@@ -66,6 +91,9 @@
                             <param id="0" name="Variable">PercentDecrease</param>
                             <param id="1" name="Value">0.2</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="6503292447060952" type="ComputerScreenOn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="3422384782980207">
@@ -80,6 +108,109 @@
                         <action id="-10" name="Add to" sid="7456466785434046" type="System">
                             <param id="0" name="Variable">PercentDecrease</param>
                             <param id="1" name="Value">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9793727759601204" type="ComputerScreenOn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1048196254479585">
+            <conditions>
+                <condition id="3" name="On touched object" sid="3050313064736146" type="Touch">
+                    <param id="0" name="Object">CompHitbox</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6651281395136262">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8415107783887096" type="System">
+                            <param id="0" name="Variable">CompOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5727886354599289" type="System">
+                            <param id="0" name="Variable">CompOn</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="173072377482023" type="System">
+                            <param id="0" name="Variable">PercentDecrease</param>
+                            <param id="1" name="Value">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7054006101477614" type="CompOn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3834206097193377">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8745528812093558" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4498578699072473" type="System">
+                            <param id="0" name="Variable">CompOn</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="6055000290569917" type="System">
+                            <param id="0" name="Variable">PercentDecrease</param>
+                            <param id="1" name="Value">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4597468060209222" type="CompOn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="702653563433703">
+            <conditions>
+                <condition id="3" name="On touched object" sid="3922351310194202" type="Touch">
+                    <param id="0" name="Object">LampHitbox</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8818728220043298">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3913280425188432" type="System">
+                            <param id="0" name="Variable">LampOn</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1099640350763767" type="System">
+                            <param id="0" name="Variable">LampOn</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="9973092276276216" type="System">
+                            <param id="0" name="Variable">PercentDecrease</param>
+                            <param id="1" name="Value">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1985553960564368" type="LampOn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="829596982743002">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1179741853407817" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6601027008677556" type="System">
+                            <param id="0" name="Variable">LampOn</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="1888294247422133" type="System">
+                            <param id="0" name="Variable">PercentDecrease</param>
+                            <param id="1" name="Value">0.2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6161855160317105" type="LampOn">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>

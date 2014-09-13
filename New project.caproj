@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>2p8as71psmrsm</unique-id>
-    <saved-with-version>17300</saved-with-version>
+    <saved-with-version>17800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -24,6 +24,7 @@
         <height>480</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
     <first-layout>StartMenu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
@@ -52,7 +53,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Bar2" sid="1498436875323554">
+        <object-type name="Drained" sid="1498436875323554">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1918531587307172" speed="5">
@@ -60,11 +61,22 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TV" sid="4517392820025143">
+        <object-type name="TVHitbox" sid="4517392820025143">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5587273397713711" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.727273" hotspotY="0.268041" original-source="C:\Users\Admin\Downloads\nolightoutlets.tif">
+                        <collision-poly>
+                            <point x="0.010101" y="0.298969" />
+                            <point x="0.244949" y="0.21134" />
+                            <point x="0.237374" y="0.0618557" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.272727" y="0.989691" />
+                            <point x="0.136364" y="0.902062" />
+                            <point x="0" y="0.484536" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -86,17 +98,130 @@
         <object-type name="BackButton" sid="5158582482810189">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Sprite" sid="5611513308160327">
+        <object-type name="Background" sid="5611513308160327">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6449607773992122" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Admin\Downloads\nolightoutlets.tif" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="5597800107012377">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite2" sid="1857504576723721">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3052774955522353" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite3" sid="4781049986024193">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1068807880454869" speed="5">
+                    <frame duration="1" hotspotX="0.505882" hotspotY="0.5" original-source="C:\Users\Admin\Downloads\tvon(light).tif" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="8113373768827258">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6053567196381112" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ComputerScreenOn" sid="7636964057943291">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9253470519478897" speed="5">
+                    <frame duration="1" hotspotX="0.505882" hotspotY="0.5" original-source="C:\Users\Admin\Downloads\tvon(light)trans.png">
+                        <collision-poly>
+                            <point x="0.164706" y="0.162791" />
+                            <point x="0.494118" y="0.162791" />
+                            <point x="0.8" y="0.197674" />
+                            <point x="0.823529" y="0.5" />
+                            <point x="0.776471" y="0.77907" />
+                            <point x="0.494118" y="0.813953" />
+                            <point x="0.176471" y="0.825581" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CompHitbox" sid="8925251204666082">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2061134634071745" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CompOn" sid="6981993778586346">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3860359609767672" speed="5">
+                    <frame duration="1" hotspotX="0.505882" hotspotY="0.5" original-source="C:\Users\Admin\Downloads\compon.png">
+                        <collision-poly>
+                            <point x="0.329412" y="0.325581" />
+                            <point x="0.670588" y="0.325581" />
+                            <point x="0.788235" y="0.5" />
+                            <point x="0.670588" y="0.674419" />
+                            <point x="0.329412" y="0.674419" />
+                            <point x="0.247059" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TvPlugIn" sid="600657408838573">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3515791150603598" speed="5">
+                    <frame duration="1" hotspotX="0.503106" hotspotY="0.502825" original-source="C:\Users\Admin\Downloads\tvplugged.png">
+                        <collision-poly>
+                            <point x="0.670807" y="0.610169" />
+                            <point x="0.496894" y="0.864407" />
+                            <point x="0.496894" y="0.870057" />
+                            <point x="0.285714" y="0.740113" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LampHitbox" sid="2501716028123333">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6998939333572684" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LampOn" sid="6018757737548049">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4260655265149986" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504274" original-source="C:\Users\Admin\Downloads\lampon.png">
+                        <collision-poly>
+                            <point x="0.314286" y="0.188034" />
+                            <point x="0.5" y="0.136752" />
+                            <point x="0.671429" y="0.196581" />
+                            <point x="0.671429" y="0.803419" />
+                            <point x="0.5" y="0.880342" />
+                            <point x="0.314286" y="0.811966" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MoneyTxt" sid="4276846706364158">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
-    <layout-folder expanded="1">
+    <layout-folder expanded="0">
         <layout>MainGame.xml</layout>
         <layout>StartMenu.xml</layout>
         <layout>Instructions.xml</layout>
