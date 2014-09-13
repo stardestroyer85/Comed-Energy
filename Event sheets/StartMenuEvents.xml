@@ -10,6 +10,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-15" name="Set visible" sid="6576546216024816" type="ClickedPlayButton">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="1001528018871384" type="System">
+                    <param id="0" name="Seconds">0.25</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="8180641872798679" type="System">
                     <param id="0" name="Layout">MainGame</param>
                 </action>
