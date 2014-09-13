@@ -10,6 +10,7 @@
     <unique-id>2p8as71psmrsm</unique-id>
     <saved-with-version>17800</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
@@ -41,7 +42,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="Touch" sid="1618951819588083">
             <plugin id="Touch" />
         </object-type>
@@ -219,17 +220,76 @@
         <object-type name="MoneyTxt" sid="4276846706364158">
             <plugin id="Text" />
         </object-type>
+        <object-type name="TapOffTitle" sid="9642573625051202">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7344733424840219" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\User\Downloads\FrontScreen.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="StartHitBox" sid="7123708706154148">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9368271443503839" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="1979136247949052">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9829233986062796" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\User\Downloads\instructions_button.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="1953804699098135">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8546956261221471" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\User\Downloads\instructions_button.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="InstructionsHitBox" sid="6584202876166581">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9867308724222542" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BluredBackground" sid="7083779163044738">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6286353030896266" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500952" original-source="C:\Users\User\Downloads\Blur-Backgrounds-1.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameOvertxt" sid="8724317210090531">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Resettxt" sid="2341928658351917">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Audio" sid="8101175807125129">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout>MainGame.xml</layout>
         <layout>StartMenu.xml</layout>
         <layout>Instructions.xml</layout>
+        <layout>GameOver.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>MainGameEvents.xml</event-sheet>
         <event-sheet>StartMenuEvents.xml</event-sheet>
         <event-sheet>InstructionsEvents.xml</event-sheet>
+        <event-sheet>GameOverEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="0">
@@ -237,9 +297,43 @@
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
+        <global-instance type="Audio" uid="24">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder expanded="1" />
-    <music-folder expanded="1" />
+    <music-folder expanded="0">
+        <file name="146734__fins__timeout.m4a" />
+        <file name="146734__fins__timeout.ogg" />
+        <file name="Clock Ticking.m4a" />
+        <file name="Clock Ticking.ogg" />
+        <file name="clock tik.m4a" />
+        <file name="end game.m4a" />
+        <file name="end game.ogg" />
+        <file name="hard drive shutdown.m4a" />
+        <file name="hard drive shutdown.ogg" />
+        <file name="light switch.m4a" />
+        <file name="light switch.ogg" />
+        <file name="tv off.m4a" />
+        <file name="tv off.ogg" />
+        <file name="computer hum.m4a" />
+        <file name="computer hum.ogg" />
+        <file name="Click.m4a" />
+        <file name="Click On-SoundBible.com-1697535117.m4a" />
+        <file name="Click On-SoundBible.com-1697535117.ogg" />
+    </music-folder>
     <files-folder expanded="1">
         <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />

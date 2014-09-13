@@ -53,6 +53,16 @@
                 <action id="-5" name="Set width" sid="3927489070819272" type="Money">
                     <param id="0" name="Width">0</param>
                 </action>
+                <action id="-2" name="Go to layout" sid="5977056229281738" type="System">
+                    <param id="0" name="Layout">GameOver</param>
+                </action>
+                <action id="0" name="Play" sid="5234583211341257" type="Audio">
+                    <param id="0" name="Audio file">end game</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="2775296734683263" type="System" />
             </actions>
         </event-block>
         <event-block sid="835316184958081">
@@ -72,7 +82,14 @@
                     <param id="0" name="Object">TVHitbox</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Play" sid="2833811733971865" type="Audio">
+                    <param id="0" name="Audio file">tv off</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="6419129916595266">
                     <conditions>
@@ -172,7 +189,14 @@
                     <param id="0" name="Object">LampHitbox</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Play" sid="6922418635424185" type="Audio">
+                    <param id="0" name="Audio file">light switch</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="8818728220043298">
                     <conditions>

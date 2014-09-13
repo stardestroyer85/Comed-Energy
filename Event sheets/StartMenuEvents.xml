@@ -6,24 +6,36 @@
         <event-block sid="6491570211978015">
             <conditions>
                 <condition id="3" name="On touched object" sid="5681959877075234" type="Touch">
-                    <param id="0" name="Object">Text_Start</param>
+                    <param id="0" name="Object">StartHitBox</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="8180641872798679" type="System">
                     <param id="0" name="Layout">MainGame</param>
                 </action>
+                <action id="0" name="Play" sid="7799910857951516" type="Audio">
+                    <param id="0" name="Audio file">Click On-SoundBible.com-1697535117</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="2713684710679767">
             <conditions>
                 <condition id="3" name="On touched object" sid="6004538938155974" type="Touch">
-                    <param id="0" name="Object">Text_Instructions</param>
+                    <param id="0" name="Object">InstructionsHitBox</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="8125399579257867" type="System">
                     <param id="0" name="Layout">Instructions</param>
+                </action>
+                <action id="0" name="Play" sid="3019594819271679" type="Audio">
+                    <param id="0" name="Audio file">Click On-SoundBible.com-1697535117</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
